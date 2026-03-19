@@ -54,3 +54,26 @@ def calculate_statistics():
   print("-----------------------")
   print(f"Total products: {total_products}")
   print(f"Total inventory: {total_inventory}")
+
+# Block to view the menu and execute the available options
+while True:
+    print("\n * * * * MENU * * * * \n1. Display inventory \n2. Add products \n3. Calculate statistics \n4. Log out")
+
+    opcion = input("\nEnter an option: ")
+
+    if opcion == "1":
+      show_inventory()
+    elif opcion == "2":
+      add_product()
+    elif opcion == "3":
+      calculate_statistics()
+    elif opcion == "4":
+      print("Exiting the system...")
+      break
+    else:
+        print("Enter a valid option")
+
+# This code allows the user to view stored products, add new items with data validation (price and quantity), 
+# and calculate statistics such as the total inventory value and the number of registered products. 
+# It also features an interactive menu that facilitates navigation between the different options, 
+# making the system easy to use and understand.
