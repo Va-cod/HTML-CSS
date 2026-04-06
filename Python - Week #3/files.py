@@ -3,6 +3,22 @@ from services import *
 
 # Function to save csv
 def save_csv(inventory, file):
+    """
+    Saves the inventory data into a CSV file.
+
+    The function:
+    - Validates that the inventory is not empty.
+    - Writes a header (Name,Price,Quantity).
+    - Writes each product as a row in the file.
+    - Handles permission and general errors.
+
+    Parameters:
+    inventory (list): A list of dictionaries with product data.
+    file (str): The path or name of the file to save.
+
+    Returns:
+    None
+    """
     # Validate that the inventory is not empty.
     if not inventory:
         print("The inventory is empty. There is no data to save.")
@@ -26,6 +42,24 @@ def save_csv(inventory, file):
 
 # Funtion to upload csv
 def upload_csv(file, inventory):
+    """
+    Loads products from a CSV file and updates the inventory.
+
+    The function:
+    - Validates the file header (Name,Price,Quantity).
+    - Reads and validates each row.
+    - Converts Price to float and Quantity to int.
+    - Skips invalid rows.
+    - Asks the user if they want to overwrite or merge data.
+    - Merges by product name if not overwritten.
+
+    Parameters:
+    file (str): The path or name of the CSV file to read.
+    inventory (list): The current inventory list.
+
+    Returns:
+    None
+    """
     added_products = []
     invalid_rows = 0
 
@@ -70,8 +104,8 @@ def upload_csv(file, inventory):
     except UnicodeDecodeError:
         print("Error: File encoding problem.")
         return
-    except Exception as e:
-        print("Unexpected error:", e)
+    except Exception as error:
+        print(f"Unexpected error: {error}")
         return
 
     # Ask the user
@@ -96,7 +130,7 @@ def upload_csv(file, inventory):
                 inventory_dict[Name] = product
 
         inventory = list(inventory_dict.values())
-        accion = "Merger (Quantity added and Price updated)"
+        accion = "Merge: Quantity added and Price updated"
 
     # Summary
     print("\nSummary:")

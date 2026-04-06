@@ -4,10 +4,10 @@ from files import save_csv, upload_csv
 # Block to view the menu and execute the available options
 while True:
     print("\n * * * * MENU * * * * \n1. Display inventory \n2. Add products \n3. Calculate statistics \n4. Search product \n5. Update product \n6. Delate product \n7. Save cvs \n8. Upload csv \n9. Log out")
-    opcion = input("\nEnter an option: ")
-    if opcion == "1":
+    option = input("\nEnter an option: ")
+    if option == "1":
         show_inventory(inventory)
-    elif opcion == "2":
+    elif option == "2":
         name = input("\nName: ").capitalize() # Ask for the product name
         # Block to validate errors
         while True:
@@ -21,16 +21,16 @@ while True:
             except:
                 print("Error value\n")
         add_product(name, quantity, price)
-    elif opcion == "3":
+    elif option == "3":
         calculate_statistics(inventory)
-    elif opcion == "4":
+    elif option == "4":
         product = input("\nProduct to search: ").capitalize()
         search = search_product(product, inventory)
         if search == None:
             print("\nProduct not found")
         else:
             print(search)
-    elif opcion == "5":
+    elif option == "5":
         name = input("\nName: ").capitalize() # Ask for the product name
         search = search_product(name, inventory)
         if search == None:
@@ -48,23 +48,39 @@ while True:
                 except:
                     print("Error value\n")
             update_product(name, new_quantity, new_price, inventory)
-    elif opcion == "6":
+    elif option == "6":
         name = input("\nName: ").capitalize() # Ask for the product name
         delate_product(name, inventory)
-    elif opcion == "7":
+    elif option == "7":
         file = "inventory.csv"
         save_csv(inventory, file)
-    elif opcion == "8":
+    elif option == "8":
         new_inventory = []
         new_inventory = upload_csv("inventory.csv", inventory)
         print(new_inventory)
-    elif opcion == "9":
+    elif option == "9":
         print("Exiting the system...")
         break
     else:
         print("Enter a valid option")
 
-# This code allows the user to view stored products, add new items with data validation (price and quantity),
-# and calculate statistics such as the total inventory value and the number of registered products.
-# It also features an interactive menu that facilitates navigation between the different options,
-# making the system easy to use and understand.
+"""
+This system is an inventory manager.
+
+It can show all products in the list.
+It can add new products with name, price, and quantity.
+It can search a product by name.
+It can update product information.
+It can delete a product from the inventory.
+
+Also, the system can calculate statistics like:
+total value, most expensive product, and product with more quantity.
+
+The system can save the inventory in a CSV file.
+It can also load products from a CSV file.
+
+When loading a file, it checks errors and ignores bad rows.
+The user can choose to replace the inventory or merge the data.
+
+This system helps to organize and manage products in a simple way.
+"""
