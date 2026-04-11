@@ -1,0 +1,238 @@
+/* Reset all elements */
+* { 
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  box-sizing: border-box; /* Include padding and border in size */
+}
+
+/* Body style */
+body {
+  font-family: 'Courier New', Courier, monospace; /* Text style */
+  background-color: #1E293B; /* Dark background */
+}
+
+/* Header style */
+header {
+  background:#0F172A; /* Dark background */
+  height: 55px; /* Header height */
+  padding: 20px 9%; /* Space inside */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: space-between; /* Space between items */
+  font-size: 10px; /* Small text */
+  color: #ddd; /* Light text color */
+}
+
+/* Navigation links */
+nav a {
+  color: white; /* White text */
+  font-size: 18px; /* Bigger text */
+  font-weight: 400; /* Normal weight */
+  margin-right: 25px; /* Space between links */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Inline block */
+  height: 55px; /* Same height as header */
+  line-height: 55px; /* Center text vertically */
+}
+
+/* Hover effect for links */
+nav a:hover {
+  color: white; /* Keep white */
+  padding: 0 10px; /* Add space */
+  font-weight: bold; /* Bold text */
+} 
+
+/* Section style */
+section {
+  padding: 25px; /* Space inside */
+  margin: 20px; /* Space outside */
+  background: white; /* White background */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* About me container */
+#about_me div{
+  display: flex; /* Flex layout */
+  align-items: flex-start; /* Align at top */
+  gap: 50px; /* Space between items */
+  flex-wrap: wrap; /* Wrap items */
+}
+
+/* About me text */
+#about_me p {
+  text-align: justify; /* Justify text */
+  flex: 2; /* Take more space */
+  min-width: 250px; /* Minimum width */
+}
+
+/* About me image */
+#about_me img {
+  width: 200px; /* Image width */
+  height: auto; /* Keep proportion */
+  border-radius: 10px; /* Rounded corners */
+  object-fit: cover; /* Cover area */
+  flex: 1; /* Take less space */
+}
+
+/* Projects section */
+#projects {
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Column direction */
+  align-items: center; /* Center items */
+  text-align: center; /* Center text */
+}
+
+/* Projects title */
+#projects h2 {
+  margin-bottom: 20px; /* Space below */
+}
+
+/* Projects list */
+#projects ul {
+  list-style: none; /* No bullets */
+  padding: 0; /* No padding */
+  margin: 0; /* No margin */
+  width: 50%; /* Half width */
+}
+
+/* Project item */
+#projects ul li {
+  background: #ddd; /* Light background */
+  margin: 10px 0; /* Space between items */
+  padding: 12px; /* Space inside */
+  border-radius: 5px; /* Rounded corners */
+  width: 100%; /* Full width */
+}
+
+/* Project link */
+#projects a {
+  text-decoration: none; /* No underline */
+  color: inherit; /* Same color */
+  display: block; /* Block element */
+}
+
+/* Hover on project */
+#projects li:hover {
+  background: teal; /* Change color */
+  color: white; /* White text */
+  font-weight: bold; /* Bold text */
+}
+
+/* Contact section */
+#contact {
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Column */
+  align-items: center; /* Center items */
+  padding: 40px; /* Space inside */
+  background-color: #f4f4f4; /* Light background */
+}
+
+/* Contact title */
+#contact h2 {
+  margin-bottom: 20px; /* Space below */
+  color: teal; /* Teal color */
+}
+
+/* Contact form */
+#contact form {
+  background: #ddd; /* Light background */
+  padding: 25px; /* Space inside */
+  border-radius: 5px; /* Rounded corners */
+  width: 300px; /* Fixed width */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow */
+}
+
+/* Fieldset */
+#contact fieldset {
+  border: none; /* No border */
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Column */
+}
+
+/* Labels */
+#contact label {
+  margin-top: 10px; /* Space above */
+  margin-bottom: 5px; /* Space below */
+  font-weight: bold; /* Bold text */
+}
+
+/* Inputs */
+#contact input {
+  padding: 8px; /* Space inside */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #000000; /* Black border */
+  outline: none; /* No outline */
+}
+
+/* Input focus */
+#contact input:focus {
+  border-color: teal; /* Change border */
+  box-shadow: 0 0 5px rgba(0, 128, 128, 0.5); /* Glow effect */
+}
+
+/* Buttons */
+#contact button {
+  margin-top: 15px; /* Space above */
+  padding: 10px; /* Space inside */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  font-weight: bold; /* Bold text */
+}
+
+/* Submit button */
+#contact button[type="submit"] {
+  background-color: #ccc; /* Gray background */
+  color: rgb(0, 0, 0); /* Black text */
+}
+
+/* Reset button */
+#contact button[type="reset"] {
+  background-color: #ccc; /* Gray background */
+}
+
+/* Button hover */
+#contact button:hover {
+  background-color: teal; /* Change color */
+}
+
+/* Countries section */
+#countries {
+  display: flex; /* Flex layout */
+  justify-content: center; /* Center items */
+  gap: 20px; /* Space between */
+  padding: 40px; /* Space inside */
+  flex-wrap: wrap; /* Wrap items */
+  background-color: #ffffff; /* White background */
+}
+
+/* Country card */
+#countries article {
+  background: #1E293B; /* Dark background */
+  border-radius: 10px; /* Rounded corners */
+  width: 300px; /* Fixed width */
+  overflow: hidden; /* Hide overflow */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animation */
+}
+
+/* Country image */
+#countries article img {
+  width: 100%; /* Full width */
+  height: 180px; /* Fixed height */
+  object-fit: cover; /* Cover area */
+}
+
+/* Country title */
+#countries article h3{
+  color: #ccc; /* Light color */
+  text-align: center; /* Center text */
+}
+
+/* Country text */
+#countries article p {
+  padding: 15px; /* Space inside */
+  color: #E2E8F0; /* Light text */
+  font-size: 14px; /* Small text */
+  text-align: justify; /* Justify text */
+}
