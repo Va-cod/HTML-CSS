@@ -1,3 +1,5 @@
+/* - - - - - - -  Styles for the document index.html - - - - - - - - - */
+
 /* Reset page styles */
 body {
   background-color: rgb(249, 243, 243);       /* Page background */
@@ -81,7 +83,7 @@ body {
 
 /* Projects section */
 .projects {
-    padding: 2rem;                              /* Inner space */
+    padding: 3rem;                              /* Inner space */
     margin: 2rem;                               /* Outer space */
     border-radius: 0.5rem;                      /* Rounded corners */
     background-color: #88CDB2;                /* Background color */
@@ -90,7 +92,7 @@ body {
 /* Section title */
 .projects h2 {
     color: rgb(13, 13, 13);                  /* Text color */
-    margin-bottom: 1.5rem;                     /* Space below title */
+    margin: 0rem;                     /* Space below title */
     font-size: 1.5rem;                         /* Text size */
     text-align: center;                        /* Center text */
 }
@@ -122,4 +124,111 @@ body {
 /* Hover effect */
 .projects ul li:hover {
     border: 0.15rem solid #062425;         /* Border on hover */
+}
+
+/* Contact section */
+.contact {
+    padding: 3rem;                           /* Inner space */
+    border-radius: 0.5rem;                   /* Rounded corners */
+    background-color: #88CDB2;             /* Background color */
+    margin: 2rem;                            /* Outer space */
+    display: flex;                           /* Flex layout */
+    flex-direction: column;                  /* Vertical layout */
+    align-items: center;                     /* Center items */
+}
+
+/* Section title */
+.contact h2 {
+    color: rgb(13, 13, 13);                /* Text color */
+    margin: 0 0 1rem 0;                      /* Space below title */
+    font-size: 1.5rem;                       /* Text size */
+    text-align: center;                      /* Center text */
+}
+
+/* Form container */
+.contact form {
+    background: #2E765E;                  /* Background color */
+    padding: 2rem;                          /* Inner space */
+    border-radius: 0.5rem;                  /* Rounded corners */
+    width: 20rem;                           /* Form width */
+    display: flex;                          /* Flex layout */
+    flex-direction: column;                 /* Vertical layout */
+}
+
+/* Labels */
+.contact label {
+    font-weight: bold;                      /* Bold text */
+    margin-bottom: 0.2rem;                  /* Small space below */
+    margin-top: 0.9rem;                     /* Space above */
+}
+
+/* Inputs */
+.contact input {
+    width: 18.5rem;                        /* Input width */
+    padding: 0.7rem;                       /* Inner space */
+    border: 0.08rem solid #000000;       /* Border */
+    border-radius: 0.3rem;                 /* Rounded corners */
+}
+
+/* Buttons */
+.contact button {
+    margin-top: 1rem;                      /* Space above */
+    padding: 10px;                         /* Inner space */
+    border-radius: 5px;                    /* Rounded corners */
+    cursor: pointer;                       /* Pointer cursor */
+    font-weight: bold;                     /* Bold text */
+    border: none;                          /* No border */
+}
+
+/* Button hover */
+.contact button:hover {
+    background-color: rgb(176, 217, 217);   /* Change color on hover */
+}
+
+
+/* - - - - - - -  Styles for the document countries.html - - - - - - - - - */
+
+/* Projects section */
+.countries {
+    padding: 3rem;                              /* Inner space */
+    margin: 2rem;                               /* Outer space */
+    border-radius: 0.5rem;                      /* Rounded corners */
+    background-color: #88CDB2;                /* Background color */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);      /* three columns */
+    gap: 3rem;
+}
+
+.countries article {
+    background: #062425;                      /* Dark background */
+    border-radius: 0.5rem;                      /* Rounded corners */
+    width: 18rem;                               /* Fixed width */
+}
+
+/* Country image */
+.countries article img {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    width: 100%;                                  /* Full width */
+    object-fit: cover;                            /* Cover area */
+}
+
+/* Country title */
+.countries article h3{
+    color: #ccc;                                  /* Light color */
+    text-align: center;                             /* Center text */
+    margin-bottom: 1rem;
+}
+
+/* Country text */
+.countries article p {
+    padding: 15px;                                  /* Space inside */
+    color: #ffffff;                               /* Light text */
+    font-size: 14px;                                /* Small text */
+    text-align: justify;                            /* Justify text */
+    margin-top: 1rem;
+}
+
+.countries article:hover{
+    box-shadow: 0px 4px 10px #2E765E;
 }
