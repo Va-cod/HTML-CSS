@@ -1,0 +1,45 @@
+/* Reset page styles */
+body {
+  background-color: rgb(249, 243, 243);       /* Page background */
+  margin: 0rem;                    /* Remove margin */
+  padding: 0rem;                   /* Remove padding */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;               /* Font style */
+}
+
+/* Header container */
+.header {
+    background-color: #062425;               /* Header background */
+    padding: 0.7rem;                           /* Space inside header */
+    display: flex;                             /* Align each item in a row */
+    justify-content: space-between;            /* Space between title and menu */
+    align-items: center;                       /* Center items vertically */
+    flex-wrap: wrap;                           /* Wrap on small screens */
+}
+
+/* Header title */
+.header h1 {
+    color: white;                            /* Text color */
+    margin: 0;                                 /* Remove margin */
+    font-size: 1.5rem;                         /* Text size */
+}
+
+/* Navigation container */
+.header nav {
+    display: flex;                             /* Align each item in a row */
+    flex-wrap: wrap;                           /* Wrap items */
+    gap: 2rem;                                 /* Space between links */
+}
+
+/* Navigation links */
+.header nav a {
+    border-radius: 0.3rem;                     /* Rounded corners */
+    text-decoration: none;                     /* No underline */
+    color: white;                            /* Text color */
+    font-size: 1rem;                           /* Text size */
+    padding: 0.5rem 1rem;                      /* Inner space */
+}
+
+/* Hover effect */
+.header nav a:hover {
+    background-color: #2E765E;               /* Change color on hover */
+}
