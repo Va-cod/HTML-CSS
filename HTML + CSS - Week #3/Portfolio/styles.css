@@ -70,7 +70,8 @@ body {
 
 /* Image style */
 .about_me div img {
-    width: 20rem;
+    max-width: 40%;
+    height: auto;
     border-radius: 0.8rem;                     /* Rounded corners */
 }
 
@@ -149,7 +150,7 @@ body {
     background: #2E765E;                  /* Background color */
     padding: 2rem;                          /* Inner space */
     border-radius: 0.5rem;                  /* Rounded corners */
-    width: 20rem;                           /* Form width */
+    width: auto;                            /* Form width */
     display: flex;                          /* Flex layout */
     flex-direction: column;                 /* Vertical layout */
 }
@@ -171,8 +172,8 @@ body {
 /* Buttons */
 .contact button {
     margin-top: 1rem;                      /* Space above */
-    padding: 10px;                         /* Inner space */
-    border-radius: 5px;                    /* Rounded corners */
+    padding: 1rem;                         /* Inner space */
+    border-radius: 0.2rem;                    /* Rounded corners */
     cursor: pointer;                       /* Pointer cursor */
     font-weight: bold;                     /* Bold text */
     border: none;                          /* No border */
@@ -207,8 +208,8 @@ body {
 .countries article img {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    width: 100%;                                  /* Full width */
-    object-fit: cover;                            /* Cover area */
+    max-width: 100%;                                  /* Full width */
+    object-fit: cover;                                /* Cover area */
 }
 
 /* Country title */
@@ -244,6 +245,13 @@ body {
         width: auto;                               /* Fixed width */
     }
 
+    .contact form {
+        padding: 1rem;                              /* Inner space */
+        width: 60%;                                /* Form width */
+        display: flex;                              /* Flex layout */
+        flex-direction: column;                     /* Vertical layout */
+    }
+
 }
 
 @media (max-width: 400px) {
@@ -265,7 +273,8 @@ body {
     }
 
     .about_me div img {
-        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 
     .projects {
